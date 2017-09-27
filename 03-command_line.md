@@ -20,7 +20,17 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+`pwd`
+`mkdir`
+`rm -rf`
+`touch foo.txt`
+`rm foo.txt`
+`mv foo.txt bar.txt`
+`ls -a`
+`cp bar.txt ../newdir/bar.txt`
+`curl`
+`grep`
 
 ---
 
@@ -35,7 +45,15 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+`ls`  - list files
+`ls -a`  - list all files, including hidden ones
+`ls -l`  - list all files in a list with additional information
+`ls -lh`  - list all files with additional info and shortens the filesize display
+`ls -lah`  - `-a`, `-l`, and `-h` combined
+`ls -t`  - sort by time modified
+`ls -Glp`  - `-p` will append a `/` to directory names, and `-G` will add colorization
+
 
 ---
 
@@ -43,7 +61,7 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > My go-to has been `-alt`, but I suppose if I had to pick, I'd throw in `-R` and `-r`
 
 ---
 
@@ -51,7 +69,22 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `xargs` basically allows for multiple arguments to be passed (separately) to a single command. For example, say I have a list of files that I want to `grep` through. Instead of individually passing multiple `grep` commands, I can use `xargs grep` and include a list of file names that will run separately.
+
+Two options of doing this is with the `-L` flag and the `-n` flag.
+
+With the `-L` flag, we include a number `n`, and afterwards, `xargs` will treat every `n` number of lines of input as one argument. For example:
+
+`xargs -L 1 grep`
+`"foo.txt"`
+`"bar.txt"`
+
+The commands above will run grep once for every 1 row of input, in this case `foo.txt` and again for `bar.txt`
+
+The `-n` flag is similar, but instead will treat each standalone input deliminated by the space as an argument. Thus the following will have the same results:
+
+`xargs -n 1 grep`
+`"foo.txt" "bar.txt"`
 
  
 
