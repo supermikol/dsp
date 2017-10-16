@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> lists are mutable, whereas tuples are immutable. As a result of being immutable, tuples can be used as keys.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists are ordered, and sets are unordered. Lists are mutable, sets are immutable. Lists allow duplicates, sets are unique. Set items cannot be accessed by index.Set is faster for finding an element, because the values are hashed and search is hence O(1). Lists on the other hand, require iterating through the entire list to find the value (O(n))
 
 ---
 
@@ -28,7 +28,12 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lambda is a single-use anonymous function. It's used mainly as an argument that typically calls for a method to be passed in. For example, filter() takes a function and also a list that is pass through that function. Instead of defining a method and then passing it in, we can directly pass in a lambda.
+
+```
+list = [5,4,3,2,1]
+sorted(list, key=lambda x: x%2)
+```
 
 ---
 
@@ -36,7 +41,20 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions is a math-like notation of describing a list (or dictionary or set), with the combined features of both `map` and `filter`.
+For example, using more 'traditional' code, if I wanted to take a list and then `filter` out all the odd numbers, and then `map` all the values by squaring it, it would look like this:
+
+```
+list = [1,2,3,4,5]
+filtered_list = filter(lambda x: x % 2 == 0, list)
+mapped_filtered_list = []
+for value in filtered_list:
+  mapped_filtered_list.append(value**2)
+```
+Whereas with a list comprehension, the following would accomplisht he same thing:
+```
+transformed_list = [ x**2 for x in list if x%2 == 0]
+```
 
 ---
 
@@ -51,7 +69,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +77,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +85,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
