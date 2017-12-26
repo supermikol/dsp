@@ -1,5 +1,6 @@
 import csv
 import re
+from collections import defaultdict
 
 with open('faculty.csv', 'r') as csvfile:
   spamreader = csv.reader(csvfile)
