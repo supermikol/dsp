@@ -60,4 +60,39 @@ Sublime is probably the most popular editor for new coders. You can set it up to
 
 Spyder and PyCharm are IDEs for Python. They try to give you a fully configured setup out of the box.
 
+<<<<<<< HEAD
 We will also use Jupyter notebooks, but this does not remove the need for proficiency in an editor or IDE.
+=======
+We will also use Jupyter (IPython) notebooks, but this does not remove the need for proficiency in an editor or IDE.
+
+---
+
+### Q1:  Create Files with Terminal Editors
+
+1.  Create a file called `nutmeg.py`, using **nano**, add a couple of lines of text, save and exit.  
+Some sample lines:  
+```
+print("This file was created using the nano editor")
+print("This file was created by Reshama")
+```
+2.  Create a file called `vinegar.py` using **vim**, add a couple of lines of code, save and exit.
+3.  Create a file called `egg.py` using **emacs**, add a couple of lines of code, save and exit.
+
+Upload these 3 files to the [`editors`](editors/) folder.  
+
+### Q2. Terminal Editor
+
+What terminal editor will be your preferred choice of use? How did you make your decision?
+
+>> Based on what my lab members have told me, it sounds like I should learn VIM but then go with Emacs as my main terminal editor
+
+--
+
+### Q3. Graphical Editor
+
+What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
+
+>> I've been using Sublime for coding so I'll stick with that. Cmd + D is a personal favorite for finding patterns. Ctrl + CMD + arrow is useful for moving lines around.
+
+ 
+>>>>>>> ca78cf5396cd1d578f8e3b66b61985a215c183fa
